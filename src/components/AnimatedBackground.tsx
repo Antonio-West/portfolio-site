@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 
-const AnimatedBackground = ({ speedMultiplier = 1 }: { speedMultiplier?: number }) => {
+const AnimatedBackground = ({ speedMultiplier = 0.6 }: { speedMultiplier?: number }) => {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const animationFrameId = useRef<number | null>(null);
   const particlesRef = useRef<{ x: number; y: number; vx: number; vy: number; radius: number }[]>([]);
@@ -14,7 +14,6 @@ const AnimatedBackground = ({ speedMultiplier = 1 }: { speedMultiplier?: number 
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    // Ensures the canvas properly scales within its parent container
     const updateCanvasSize = () => {
       const scale = window.devicePixelRatio || 1;
       const parent = canvas.parentElement;
@@ -36,29 +35,32 @@ const AnimatedBackground = ({ speedMultiplier = 1 }: { speedMultiplier?: number 
 
     const width = canvas.width / (window.devicePixelRatio || 1);
     const height = canvas.height / (window.devicePixelRatio || 1);
-    const particleCount = Math.floor((width * height) / 5000);
-    const maxDist = width < 768 ? 80 : 150;
+    // Lower particle density to eliminate visual clutter
+    const particleCount = Math.floor((width * height) / 16000);
+    const maxDist = width < 768 ? 90 : 130;
 
-    // Initialize particles
+    // Initialize particles with smaller radius and gentle velocity
     particlesRef.current = Array.from({ length: particleCount }, () => ({
       x: Math.random() * width,
       y: Math.random() * height,
-      vx: (Math.random() * 0.5 - 0.25) * speedMultiplier,
-      vy: (Math.random() * 0.5 - 0.25) * speedMultiplier,
-      radius: Math.random() * 3 + 1,
+      vx: (Math.random() * 0.3 - 0.15) * speedMultiplier,
+      vy: (Math.random() * 0.3 - 0.15) * speedMultiplier,
+      radius: Math.random() * 1.5 + 0.8,
     }));
 
     const drawParticles = () => {
       ctx.clearRect(0, 0, width, height);
 
+      // Draw connecting lines with very subtle opacity (max 15%)
       particlesRef.current.forEach((p1, i) => {
         particlesRef.current.forEach((p2, j) => {
-          if (i !== j) {
+          if (i > j) {
             const dist = Math.hypot(p1.x - p2.x, p1.y - p2.y);
             if (dist < maxDist) {
+              const alpha = (1 - dist / maxDist) * 0.14;
               ctx.beginPath();
-              ctx.strokeStyle = `rgba(0, 150, 255, ${1 - dist / maxDist})`;
-              ctx.lineWidth = 0.5;
+              ctx.strokeStyle = `rgba(59, 130, 246, ${alpha})`;
+              ctx.lineWidth = 0.6;
               ctx.moveTo(p1.x, p1.y);
               ctx.lineTo(p2.x, p2.y);
               ctx.stroke();
@@ -67,11 +69,11 @@ const AnimatedBackground = ({ speedMultiplier = 1 }: { speedMultiplier?: number 
         });
       });
 
-      // Draw particles
+      // Draw subtle nodes with 20% opacity
       particlesRef.current.forEach((p) => {
         ctx.beginPath();
         ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
-        ctx.fillStyle = "rgba(0, 150, 255, 1)";
+        ctx.fillStyle = "rgba(96, 165, 250, 0.22)";
         ctx.fill();
       });
 
@@ -103,7 +105,13 @@ const AnimatedBackground = ({ speedMultiplier = 1 }: { speedMultiplier?: number 
     };
   }, [speedMultiplier]);
 
-  return <canvas ref={canvasRef} className="absolute top-0 left-0 w-full h-full z-0" />;
+  return (
+    <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
+      <canvas ref={canvasRef} className="absolute inset-0 w-full h-full opacity-60" />
+      {/* Dark radial gradient mask to keep central text zone 100% clean and high-contrast */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(3,7,18,0.75)_0%,rgba(3,7,18,0.95)_100%)]" />
+    </div>
+  );
 };
 
 export default AnimatedBackground;
