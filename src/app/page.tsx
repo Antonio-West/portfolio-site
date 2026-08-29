@@ -5,103 +5,139 @@ import type { Metadata } from "next";
 
 export const generateMetadata = (): Metadata => {
   return {
-    title: "Antonio West | AI Document Automation & Workflow Systems",
+    title: "Antonio West | Full-Stack AI & LLM Systems Engineer",
     description:
-      "Production AI document pipelines, workflow automations, and full-stack Next.js + LLM systems by Antonio West.",
+      "Full-Stack AI Engineer specializing in Next.js, PostgreSQL, OpenAI APIs, and automated document & audio extraction pipelines.",
   };
 };
 
 export default function Home() {
   return (
     <div className="relative min-h-screen bg-gray-950 text-white overflow-hidden">
-      <AnimatedBackground speedMultiplier={0.08} />
+      <AnimatedBackground speedMultiplier={0.05} />
 
-      <div className="relative z-10 max-w-5xl mx-auto px-4 py-16 sm:py-24 space-y-16">
+      <div className="relative z-10 max-w-5xl mx-auto px-4 py-16 sm:py-20 space-y-16">
         {/* Hero Section */}
-        <div className="text-center space-y-6 max-w-3xl mx-auto">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-400 text-xs font-mono tracking-wide uppercase">
-            Fixed-Scope AI Document &amp; Workflow Sprints
+        <div className="space-y-6 max-w-3xl">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-mono">
+            TypeScript &bull; Next.js &bull; PostgreSQL &bull; OpenAI APIs
           </div>
 
-          <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight bg-gradient-to-r from-white via-gray-100 to-gray-400 bg-clip-text text-transparent">
-            Automating Unstructured Document Workflows with Production AI
+          <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight">
+            Antonio West
           </h1>
 
-          <p className="text-lg sm:text-xl text-gray-300 leading-relaxed">
-            I turn messy PDFs, contracts, invoices, and unstructured operational documents into validated, structured data synced straight into your CRM or database.
+          <p className="text-xl text-gray-200 font-medium">
+            Full-Stack AI Engineer architecting production LLM pipelines, automated document extraction, and high-availability Next.js applications.
           </p>
 
-          <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
-            <Link href="/projects">
-              <button className="px-6 py-3 bg-blue-600 hover:bg-blue-500 active:bg-blue-700 text-white font-semibold rounded-lg shadow-lg shadow-blue-500/20 transition-all cursor-pointer">
-                View Systems &amp; Case Studies &rarr;
-              </button>
+          <p className="text-sm sm:text-base text-gray-400 leading-relaxed">
+            3 years shipping production systems. Contract experience architecting document ingestion pipelines (<code className="text-xs font-mono text-blue-300">pdfjs-dist</code>, <code className="text-xs font-mono text-blue-300">mammoth</code>, GPT-4o), meeting intelligence engines (Whereby API + Drizzle/Postgres), and resilient client-side web architectures.
+          </p>
+
+          <div className="flex flex-wrap items-center gap-3 pt-2">
+            <Link
+              href="/projects"
+              className="px-5 py-2.5 bg-blue-600 hover:bg-blue-500 text-white text-sm font-semibold rounded-lg shadow-md shadow-blue-500/20 transition-all"
+            >
+              View Production Case Studies &rarr;
             </Link>
             <a
               href="mailto:antoniowestdev@gmail.com"
-              className="px-6 py-3 bg-gray-900 hover:bg-gray-800 text-gray-200 font-medium rounded-lg border border-gray-800 hover:border-gray-700 transition-all"
+              className="px-5 py-2.5 bg-gray-900 hover:bg-gray-800 text-gray-300 hover:text-white text-sm font-medium rounded-lg border border-gray-800 transition-all"
             >
-              Get in Touch &rarr;
+              Contact &bull; antoniowestdev@gmail.com
             </a>
           </div>
         </div>
 
-        {/* What I Deliver Grid */}
+        {/* Real Contract Highlights Section */}
         <div className="space-y-6">
-          <div className="text-center">
-            <div className="text-xs font-mono text-gray-400 uppercase tracking-widest">
-              The Architecture
-            </div>
-            <h2 className="text-2xl font-bold mt-1 text-white">
-              What I Deliver in 7-Day Sprints
+          <div className="border-b border-gray-800 pb-3">
+            <h2 className="text-lg font-bold font-mono uppercase tracking-wider text-gray-300">
+              Shipped Commercial Systems
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-gray-900/80 border border-gray-800 rounded-xl p-6 shadow-xl">
-              <div className="text-xs font-mono text-blue-400 uppercase mb-2">01 / Ingestion &amp; OCR</div>
-              <h3 className="text-lg font-bold text-white mb-2">Multi-Format Ingestion</h3>
-              <p className="text-sm text-gray-400 leading-relaxed">
-                Automated listeners for email inboxes, webhook uploads, and drag-and-drop portals. Handles multi-page PDFs, scanned paperwork, and Word docs with zero manual effort.
-              </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Contract Project 1: Be Act Change */}
+            <div className="bg-gray-900/90 border border-gray-800 rounded-xl p-6 flex flex-col justify-between space-y-4">
+              <div className="space-y-3">
+                <div className="flex items-center justify-between text-xs font-mono">
+                  <span className="text-blue-400 bg-blue-500/10 px-2 py-0.5 rounded border border-blue-500/20">
+                    Contract AI Engineer &bull; Be Act Change
+                  </span>
+                  <span className="text-gray-500">Next.js / GPT-4o</span>
+                </div>
+                <h3 className="text-lg font-bold text-white">
+                  Document Parsing &amp; Personalised Coaching Pipeline
+                </h3>
+                <p className="text-sm text-gray-300 leading-relaxed">
+                  Engineered automated text extraction from multi-page PDF &amp; DOCX uploads using <code className="text-xs font-mono text-gray-200">pdfjs-dist</code> and <code className="text-xs font-mono text-gray-200">mammoth</code> to eliminate manual data entry. Built a 23-step dynamic onboarding engine with localStorage state recovery and automated GPT-4o output regeneration.
+                </p>
+                <div className="flex flex-wrap gap-1.5 pt-1">
+                  {["Next.js", "TypeScript", "GPT-4o", "pdfjs-dist", "mammoth", "shadcn/ui"].map((t) => (
+                    <span key={t} className="text-xs font-mono bg-gray-800 text-gray-400 px-2 py-0.5 rounded">
+                      {t}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              <div className="pt-2 border-t border-gray-800/80">
+                <Link
+                  href="/projects/ai-document-pipeline"
+                  className="text-xs font-mono text-blue-400 hover:text-blue-300 inline-flex items-center gap-1"
+                >
+                  Read System Architecture &rarr;
+                </Link>
+              </div>
             </div>
 
-            <div className="bg-gray-900/80 border border-gray-800 rounded-xl p-6 shadow-xl">
-              <div className="text-xs font-mono text-emerald-400 uppercase mb-2">02 / AI Extraction</div>
-              <h3 className="text-lg font-bold text-white mb-2">Schema-Validated Extraction</h3>
-              <p className="text-sm text-gray-400 leading-relaxed">
-                Powered by state-of-the-art LLMs with strict Zod/JSON Schema validation, automated error retries, and confidence scoring to flag edge cases for human review.
-              </p>
-            </div>
-
-            <div className="bg-gray-900/80 border border-gray-800 rounded-xl p-6 shadow-xl">
-              <div className="text-xs font-mono text-purple-400 uppercase mb-2">03 / Dashboard &amp; Sync</div>
-              <h3 className="text-lg font-bold text-white mb-2">Operator Review &amp; CRM Sync</h3>
-              <p className="text-sm text-gray-400 leading-relaxed">
-                Side-by-side Next.js operator screen with 1-click approvals and direct automatic sync into Google Sheets, PostgreSQL, Supabase, or custom CRM webhooks.
-              </p>
+            {/* Contract Project 2: Alive Industries / ChatSDK */}
+            <div className="bg-gray-900/90 border border-gray-800 rounded-xl p-6 flex flex-col justify-between space-y-4">
+              <div className="space-y-3">
+                <div className="flex items-center justify-between text-xs font-mono">
+                  <span className="text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">
+                    Contract Developer &bull; Alive Industries
+                  </span>
+                  <span className="text-gray-500">Whereby / Drizzle</span>
+                </div>
+                <h3 className="text-lg font-bold text-white">
+                  Meeting Audio Summarisation &amp; Intelligence Engine
+                </h3>
+                <p className="text-sm text-gray-300 leading-relaxed">
+                  Architected meeting intelligence pipeline ingesting Whereby recordings through a multi-provider LLM layer. Engineered background processing with caching and real-time polling for transcripts, persisting structured action items via Drizzle ORM &amp; PostgreSQL.
+                </p>
+                <div className="flex flex-wrap gap-1.5 pt-1">
+                  {["TypeScript", "Next.js", "PostgreSQL", "Drizzle ORM", "Whereby API", "Biome"].map((t) => (
+                    <span key={t} className="text-xs font-mono bg-gray-800 text-gray-400 px-2 py-0.5 rounded">
+                      {t}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              <div className="pt-2 border-t border-gray-800/80">
+                <Link
+                  href="/projects/meeting-intelligence-engine"
+                  className="text-xs font-mono text-blue-400 hover:text-blue-300 inline-flex items-center gap-1"
+                >
+                  Read System Architecture &rarr;
+                </Link>
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Secondary Side Projects & Deep Tech */}
-        <div className="border-t border-gray-800/80 pt-10 text-center space-y-3">
-          <p className="text-xs font-mono text-gray-500 uppercase tracking-wider">
-            Technical Deep Dives &amp; Engineering Projects
-          </p>
-          <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-gray-400">
-            <Link
-              href="/projects/ai-drug-pipeline"
-              className="hover:text-blue-400 transition-colors inline-flex items-center gap-1"
-            >
-              &bull; AI Drug Discovery &amp; Toxicity ML Pipeline &rarr;
+        {/* Technical Deep Dives & Side Projects */}
+        <div className="border-t border-gray-800 pt-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-xs font-mono text-gray-400">
+          <div>Other Projects:</div>
+          <div className="flex flex-wrap gap-4">
+            <Link href="/projects/ai-drug-pipeline" className="hover:text-blue-400 transition-colors">
+              &bull; Molecular Toxicity ML Pipeline (GitLab) &rarr;
             </Link>
-            <Link
-              href="/projects/gpu-optimizer"
-              className="hover:text-blue-400 transition-colors inline-flex items-center gap-1"
-            >
-              &bull; WebGL Texture &amp; GPU Memory Optimizer (Side Project) &rarr;
-            </Link>
+            <a href="https://tool.antoniowest.dev" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">
+              &bull; WebGL Texture &amp; VRAM Packer (Live Demo ↗)
+            </a>
           </div>
         </div>
       </div>

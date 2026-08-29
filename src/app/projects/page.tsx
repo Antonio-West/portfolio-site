@@ -8,37 +8,37 @@ export const generateMetadata = (): Metadata => {
   return {
     title: "Projects & Systems | Antonio West",
     description:
-      "Production AI document automation, ML pipelines, and technical systems built by Antonio West.",
+      "Production AI document automation, LLM meeting intelligence, and machine learning systems built by Antonio West.",
   };
 };
 
 const productionProjects = [
   {
-    title: "AI Document & Contract Extraction Pipeline",
+    title: "Document Parsing & AI Personalisation Pipeline",
     slug: "ai-document-pipeline",
-    category: "Workflow Automation / LLM",
+    category: "Contract • Be Act Change",
     description:
-      "Fixed-scope production pipeline converting multi-page PDFs, lease agreements, and invoices into schema-validated JSON data with side-by-side operator review and automatic database/CRM sync.",
-    metrics: "Saves 40+ hrs/mo • 99.4% Accuracy",
-    tags: ["Next.js 16", "TypeScript", "GPT-4o / Claude 3.5", "Zod", "Supabase", "OCR"],
+      "Automated multi-format PDF & DOCX text extraction pipeline using pdfjs-dist and mammoth to enrich AI personalisation. Features a 23-step dynamic onboarding state machine with localStorage persistence and GPT-4o prompt guardrails.",
+    metrics: "Production PWA",
+    tags: ["Next.js", "TypeScript", "GPT-4o", "pdfjs-dist", "mammoth", "shadcn/ui", "Framer Motion"],
   },
   {
-    title: "AI Drug Analysis & Molecular Property Pipeline",
+    title: "Meeting Audio Summarisation & Intelligence Engine",
+    slug: "meeting-intelligence-engine",
+    category: "Contract • Alive Industries",
+    description:
+      "End-to-end meeting intelligence pipeline for ChatSDK. Ingests Whereby recordings, executes multi-provider LLM summarisation with background polling & caching, and persists structured action items via Drizzle ORM and PostgreSQL.",
+    metrics: "ChatSDK Infrastructure",
+    tags: ["TypeScript", "Next.js", "PostgreSQL", "Drizzle ORM", "Whereby API", "shadcn/ui"],
+  },
+  {
+    title: "Molecular Toxicity & Property ML Pipeline",
     slug: "ai-drug-pipeline",
     category: "Applied Machine Learning",
     description:
-      "Production ML pipeline designed to predict molecular properties and chemical toxicity with TreeSHAP feature attribution and partitioned Parquet data streaming.",
+      "High-throughput machine learning pipeline predicting molecular properties and compound toxicity with TreeSHAP explainability and partitioned Parquet data streaming.",
     metrics: "R² 0.99 | RMSE 0.1577",
-    tags: ["Python", "XGBoost", "TreeSHAP", "PyArrow", "Parquet", "Biomedical AI"],
-  },
-  {
-    title: "NLP Scientific Literature Analyser",
-    slug: "nlp-scientific-literature-analyser",
-    category: "NLP / Deep Learning",
-    description:
-      "Transformer-based extraction and semantic search engine for parsing scientific papers and constructing biomedical knowledge graphs.",
-    metrics: "In Active Development",
-    tags: ["NLP", "Transformers", "Entity Linking", "Knowledge Graphs"],
+    tags: ["Python", "XGBoost", "TreeSHAP", "PyArrow", "Parquet", "Scikit-Learn"],
   },
 ];
 
@@ -58,13 +58,13 @@ const sideProjects = [
 export default function ProjectsPage() {
   return (
     <div className="relative min-h-screen bg-gray-950 text-white overflow-hidden">
-      <AnimatedBackground speedMultiplier={0.08} />
+      <AnimatedBackground speedMultiplier={0.05} />
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 py-12 space-y-12">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-gray-800 pb-6">
           <div>
             <div className="text-xs font-mono text-blue-400 uppercase tracking-wider mb-1">
-              Antonio West &bull; Systems Portfolio
+              Antonio West &bull; Engineering Portfolio
             </div>
             <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight">
               Production AI &amp; Software Systems
@@ -81,7 +81,7 @@ export default function ProjectsPage() {
         {/* Primary Production Systems */}
         <div>
           <div className="text-xs font-mono text-gray-400 uppercase tracking-wider mb-4">
-            Production Pipelines &amp; Systems
+            Commercial Contracts &amp; ML Pipelines
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {productionProjects.map((project) => (
