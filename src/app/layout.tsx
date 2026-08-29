@@ -13,14 +13,14 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Antonio West | Systems, Graphics & AI Engineering",
+  title: "Antonio West | AI Document Automation & Workflow Systems",
   description:
-    "Portfolio of high-performance GPU optimization, WebGL shaders, and applied AI systems by Antonio West.",
+    "Production AI document extraction pipelines, workflow automations, and full-stack Next.js + LLM systems by Antonio West.",
   metadataBase: new URL("https://antoniowest.dev"),
   openGraph: {
-    title: "Antonio West | Systems, Graphics & AI Engineering",
+    title: "Antonio West | AI Document Automation & Workflow Systems",
     description:
-      "Client-side GPU memory optimization, WebGL pipelines, and machine learning systems.",
+      "Turn unstructured PDFs, contracts, and documents into validated structured data synced directly to your CRM or database.",
     url: "https://antoniowest.dev",
     siteName: "Antonio West",
     locale: "en_US",
