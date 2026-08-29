@@ -17,16 +17,24 @@ export default function AIDocumentPipelinePage() {
       <AnimatedBackground speedMultiplier={0.05} />
 
       <div className="relative z-10 max-w-5xl mx-auto px-4 py-12">
-        <div className="flex items-center justify-between gap-4 mb-8">
+        <div className="flex flex-wrap items-center justify-between gap-4 mb-8">
           <Link
             href="/projects"
             className="text-sm font-mono text-gray-400 hover:text-white transition-colors inline-flex items-center gap-1.5"
           >
             &larr; Back to Projects
           </Link>
-          <span className="text-xs font-mono text-blue-400 bg-blue-500/10 px-3 py-1 rounded border border-blue-500/20">
-            Commercial Production Contract &bull; Be Act Change
-          </span>
+          <div className="flex items-center gap-3">
+            <span className="text-xs font-mono text-blue-400 bg-blue-500/10 px-3 py-1 rounded border border-blue-500/20">
+              Commercial Contract &bull; Be Act Change
+            </span>
+            <a
+              href="mailto:antonio@antoniowest.dev"
+              className="text-xs font-mono text-gray-300 hover:text-white bg-gray-900 hover:bg-gray-800 px-3 py-1 rounded border border-gray-800 transition-colors"
+            >
+              Contact &rarr;
+            </a>
+          </div>
         </div>
 
         {/* Hero Section */}

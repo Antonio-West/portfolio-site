@@ -43,10 +43,10 @@ export default function Home() {
               View Production Case Studies &rarr;
             </Link>
             <a
-              href="mailto:antoniowestdev@gmail.com"
+              href="mailto:antonio@antoniowest.dev"
               className="px-5 py-2.5 bg-gray-900 hover:bg-gray-800 text-gray-300 hover:text-white text-sm font-medium rounded-lg border border-gray-800 transition-all"
             >
-              Contact &bull; antoniowestdev@gmail.com
+              Contact &bull; antonio@antoniowest.dev
             </a>
           </div>
         </div>

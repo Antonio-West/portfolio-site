@@ -70,12 +70,20 @@ export default function ProjectsPage() {
               Production AI &amp; Software Systems
             </h1>
           </div>
-          <Link
-            href="/"
-            className="text-sm font-mono text-gray-400 hover:text-white transition-colors inline-flex items-center gap-1.5"
-          >
-            &larr; Back to Overview
-          </Link>
+          <div className="flex items-center gap-4">
+            <Link
+              href="/"
+              className="text-sm font-mono text-gray-400 hover:text-white transition-colors inline-flex items-center gap-1.5"
+            >
+              &larr; Back to Overview
+            </Link>
+            <a
+              href="mailto:antonio@antoniowest.dev"
+              className="text-xs font-mono text-gray-300 hover:text-white bg-gray-900 hover:bg-gray-800 px-3.5 py-1.5 rounded-md border border-gray-800 transition-colors"
+            >
+              Contact &bull; antonio@antoniowest.dev
+            </a>
+          </div>
         </div>
 
         {/* Primary Production Systems */}
