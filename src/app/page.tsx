@@ -18,7 +18,7 @@ export default function Home() {
     <div className="relative min-h-screen bg-gray-950 text-white overflow-hidden">
       <AnimatedBackground speedMultiplier={0.05} />
 
-      <div className="relative z-10 max-w-5xl mx-auto px-4 py-16 sm:py-20 space-y-16">
+      <div className="relative z-10 max-w-5xl mx-auto px-4 py-16 sm:py-24 space-y-24">
         {/* Hero Section */}
         <div className="space-y-6 max-w-3xl">
           <div className="text-xs font-mono text-gray-400 font-medium tracking-wider uppercase">
@@ -75,44 +75,50 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Contract Project 1: Be Act Change */}
             <div className="bg-gray-900/90 border border-gray-800 rounded-xl p-6 flex flex-col justify-between space-y-4 hover:border-gray-700 transition-colors">
-              <div className="space-y-4">
+              <div className="space-y-3.5">
                 <div className="flex flex-wrap items-center justify-between gap-2 text-xs sm:text-sm font-mono">
                   <span className="text-gray-300 font-semibold whitespace-nowrap">
                     Contract AI Engineer &bull; Be Act Change
                   </span>
                   <span className="text-blue-400 font-medium">Next.js / GPT-4o</span>
                 </div>
+
+                {/* Outcome Badge Ribbon */}
+                <div className="flex flex-wrap items-center gap-2">
+                  <span className="text-[11px] font-mono font-medium px-2 py-0.5 rounded bg-blue-950/60 border border-blue-800/60 text-blue-300">
+                    Zero Manual Data Entry
+                  </span>
+                  <span className="text-[11px] font-mono font-medium px-2 py-0.5 rounded bg-gray-800 border border-gray-700 text-gray-300">
+                    23-Step State Recovery
+                  </span>
+                </div>
+
                 <Link href="/projects/ai-document-pipeline" className="group/title block">
                   <h3 className="text-xl font-bold text-white tracking-tight group-hover/title:text-blue-400 transition-colors">
                     Document Parsing &amp; Personalised Coaching Pipeline
                   </h3>
                 </Link>
+
                 <p className="text-sm sm:text-base text-gray-300 leading-relaxed">
-                  Engineered automated text extraction from multi-page PDF &amp; DOCX uploads using <code className="text-xs font-mono text-blue-300 bg-blue-950/60 px-1.5 py-0.5 rounded border border-blue-800/60">pdfjs-dist</code> and <code className="text-xs font-mono text-blue-300 bg-blue-950/60 px-1.5 py-0.5 rounded border border-blue-800/60">mammoth</code> to eliminate manual data entry. Built a 23-step dynamic onboarding engine with localStorage state recovery and automated GPT-4o output regeneration.
+                  Automated text extraction from multi-page PDF &amp; DOCX uploads using <code className="text-xs font-mono text-blue-300 bg-blue-950/60 px-1.5 py-0.5 rounded border border-blue-800/60">pdfjs-dist</code> and <code className="text-xs font-mono text-blue-300 bg-blue-950/60 px-1.5 py-0.5 rounded border border-blue-800/60">mammoth</code>. Built a 23-step dynamic onboarding state machine with localStorage session recovery and automated GPT-4o output regeneration.
                 </p>
 
-                {/* Architecture Pipeline Strip */}
-                <div className="bg-gray-950/80 border border-gray-800 rounded-lg p-3.5 sm:p-4 font-mono text-xs space-y-2.5">
-                  <div className="text-xs uppercase tracking-wider text-gray-300 font-semibold flex items-center justify-between">
-                    <span>Pipeline &bull; AST to Structured State</span>
-                    <span className="text-blue-400 font-semibold">Strict JSON</span>
+                {/* Compact Architecture Strip */}
+                <div className="bg-gray-950/90 border border-gray-800/90 rounded-lg p-3 sm:p-3.5 font-mono text-xs space-y-2">
+                  <div className="text-[11px] uppercase tracking-wider text-gray-400 font-semibold flex items-center justify-between">
+                    <span>Runtime Flow</span>
+                    <span className="text-blue-400 font-medium">Strict JSON</span>
                   </div>
                   <div className="space-y-1.5 text-xs text-gray-300">
                     <div className="flex items-center gap-2">
                       <span className="text-blue-400 font-bold">01</span>
                       <span className="text-gray-400">Ingestion:</span>
-                      <span className="text-gray-200">pdfjs-dist &amp; mammoth text extraction</span>
-                    </div>
-                    <div className="pl-4 border-l border-gray-700 text-gray-400 text-xs">
-                      &darr; AST sanitisation &bull; structural boundary extraction &bull; prompt guardrails
+                      <span className="text-gray-200">pdfjs-dist + mammoth text extraction</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <span className="text-blue-400 font-bold">02</span>
                       <span className="text-gray-400">Synthesis:</span>
-                      <span className="text-gray-200">GPT-4o schema validation (Strict JSON)</span>
-                    </div>
-                    <div className="pl-4 border-l border-gray-700 text-gray-400 text-xs">
-                      &darr; State transition dispatch with schema validation
+                      <span className="text-gray-200">GPT-4o strict JSON schema validation</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <span className="text-emerald-400 font-bold">03</span>
@@ -130,6 +136,7 @@ export default function Home() {
                   ))}
                 </div>
               </div>
+
               <div className="pt-3 border-t border-gray-800/80">
                 <Link
                   href="/projects/ai-document-pipeline"
@@ -143,27 +150,39 @@ export default function Home() {
 
             {/* Contract Project 2: Alive Industries / ChatSDK */}
             <div className="bg-gray-900/90 border border-gray-800 rounded-xl p-6 flex flex-col justify-between space-y-4 hover:border-gray-700 transition-colors">
-              <div className="space-y-4">
+              <div className="space-y-3.5">
                 <div className="flex flex-wrap items-center justify-between gap-2 text-xs sm:text-sm font-mono">
                   <span className="text-gray-300 font-semibold whitespace-nowrap">
                     Contract Developer &bull; Alive Industries
                   </span>
                   <span className="text-blue-400 font-medium">Whereby / Drizzle</span>
                 </div>
+
+                {/* Outcome Badge Ribbon */}
+                <div className="flex flex-wrap items-center gap-2">
+                  <span className="text-[11px] font-mono font-medium px-2 py-0.5 rounded bg-blue-950/60 border border-blue-800/60 text-blue-300">
+                    Async Transcript Polling
+                  </span>
+                  <span className="text-[11px] font-mono font-medium px-2 py-0.5 rounded bg-gray-800 border border-gray-700 text-gray-300">
+                    PostgreSQL / Drizzle Schema
+                  </span>
+                </div>
+
                 <Link href="/projects/meeting-intelligence-engine" className="group/title block">
                   <h3 className="text-xl font-bold text-white tracking-tight group-hover/title:text-blue-400 transition-colors">
                     Meeting Audio Summarisation &amp; Intelligence Engine
                   </h3>
                 </Link>
+
                 <p className="text-sm sm:text-base text-gray-300 leading-relaxed">
-                  Architected meeting intelligence pipeline ingesting Whereby recordings through a multi-provider LLM layer. Engineered background processing with caching and real-time polling for transcripts, persisting structured action items via Drizzle ORM &amp; PostgreSQL.
+                  Meeting intelligence pipeline ingesting Whereby recordings through a multi-provider LLM summarisation layer. Built background workers with intelligent transcript caching and polling, persisting structured action items directly to PostgreSQL via Drizzle ORM.
                 </p>
 
-                {/* Architecture Pipeline Strip */}
-                <div className="bg-gray-950/80 border border-gray-800 rounded-lg p-3.5 sm:p-4 font-mono text-xs space-y-2.5">
-                  <div className="text-xs uppercase tracking-wider text-gray-300 font-semibold flex items-center justify-between">
-                    <span>Pipeline &bull; Audio to Relational DB</span>
-                    <span className="text-blue-400 font-semibold">Async Polling</span>
+                {/* Compact Architecture Strip */}
+                <div className="bg-gray-950/90 border border-gray-800/90 rounded-lg p-3 sm:p-3.5 font-mono text-xs space-y-2">
+                  <div className="text-[11px] uppercase tracking-wider text-gray-400 font-semibold flex items-center justify-between">
+                    <span>Runtime Flow</span>
+                    <span className="text-blue-400 font-medium">Async Polling</span>
                   </div>
                   <div className="space-y-1.5 text-xs text-gray-300">
                     <div className="flex items-center gap-2">
@@ -171,16 +190,10 @@ export default function Home() {
                       <span className="text-gray-400">Trigger:</span>
                       <span className="text-gray-200">Whereby recording webhook listener</span>
                     </div>
-                    <div className="pl-4 border-l border-gray-700 text-gray-400 text-xs">
-                      &darr; Audio pipeline worker &bull; transcript cache &bull; retry polling
-                    </div>
                     <div className="flex items-center gap-2">
                       <span className="text-blue-400 font-bold">02</span>
                       <span className="text-gray-400">Intelligence:</span>
                       <span className="text-gray-200">Multi-provider LLM transcript summarisation</span>
-                    </div>
-                    <div className="pl-4 border-l border-gray-700 text-gray-400 text-xs">
-                      &darr; Action item &bull; decision point extraction
                     </div>
                     <div className="flex items-center gap-2">
                       <span className="text-emerald-400 font-bold">03</span>
@@ -198,6 +211,7 @@ export default function Home() {
                   ))}
                 </div>
               </div>
+
               <div className="pt-3 border-t border-gray-800/80">
                 <Link
                   href="/projects/meeting-intelligence-engine"
@@ -222,12 +236,25 @@ export default function Home() {
             </span>
           </div>
 
-          <div className="bg-gray-900/90 border border-gray-800 rounded-xl p-6 sm:p-8 space-y-5 hover:border-gray-700 transition-colors">
+          <div className="bg-gray-900/90 border border-gray-800 rounded-xl p-6 sm:p-8 space-y-4 hover:border-gray-700 transition-colors">
             <div className="flex flex-wrap items-center justify-between gap-3 text-xs sm:text-sm font-mono">
               <span className="text-gray-300 font-semibold whitespace-nowrap">
                 Founder &amp; Lead Engineer &bull; Veribite
               </span>
               <span className="text-emerald-400 font-medium text-xs sm:text-sm">Offline-First PWA &bull; Supermarket Barcode Engine</span>
+            </div>
+
+            {/* Outcome Badge Ribbon */}
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="text-[11px] font-mono font-medium px-2 py-0.5 rounded bg-emerald-950/60 border border-emerald-800/60 text-emerald-300">
+                &lt;1s Zero-Network Verdict
+              </span>
+              <span className="text-[11px] font-mono font-medium px-2 py-0.5 rounded bg-blue-950/60 border border-blue-800/60 text-blue-300">
+                70,000+ UK Products Indexed
+              </span>
+              <span className="text-[11px] font-mono font-medium px-2 py-0.5 rounded bg-gray-800 border border-gray-700 text-gray-300">
+                Bethnal Green Ventures Finalist
+              </span>
             </div>
 
             <div className="space-y-2">
@@ -241,30 +268,27 @@ export default function Home() {
               </p>
             </div>
 
-            {/* Architecture Pipeline Strip */}
-            <div className="bg-gray-950/80 border border-gray-800 rounded-lg p-3.5 sm:p-4 font-mono text-xs space-y-2.5">
-              <div className="text-xs uppercase tracking-wider text-gray-300 font-semibold flex items-center justify-between">
-                <span>Runtime Architecture &bull; Offline-First Scanner</span>
-                <span className="text-emerald-400 font-semibold">&lt;1s Zero-Network Verdict</span>
+            {/* Compact Runtime Architecture Strip */}
+            <div className="bg-gray-950/90 border border-gray-800/90 rounded-lg p-3 sm:p-3.5 font-mono text-xs space-y-2">
+              <div className="text-[11px] uppercase tracking-wider text-gray-400 font-semibold flex items-center justify-between">
+                <div className="flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-emerald-400"></span>
+                  <span>Offline Runtime Flow</span>
+                </div>
+                <span className="text-emerald-400 font-medium text-[11px]">&lt;1s Zero-Network</span>
               </div>
               <div className="space-y-1.5 text-xs text-gray-300">
-                <div className="flex flex-wrap items-center gap-2">
+                <div className="flex items-center gap-2">
                   <span className="text-blue-400 font-bold">01</span>
-                  <span className="text-gray-400">Continuous Camera Feed:</span>
+                  <span className="text-gray-400">Continuous Camera:</span>
                   <span className="text-gray-200">Client-side Web Worker (WASM) barcode decoding</span>
                 </div>
-                <div className="pl-4 border-l border-gray-700 text-gray-400 text-xs">
-                  &darr; Sub-second EAN/UPC resolution without network dependency
-                </div>
-                <div className="flex flex-wrap items-center gap-2">
+                <div className="flex items-center gap-2">
                   <span className="text-blue-400 font-bold">02</span>
-                  <span className="text-gray-400">Client Cache Query:</span>
-                  <span className="text-gray-200">IndexedDB local catalog (70,000+ UK products, &lt;10ms query)</span>
+                  <span className="text-gray-400">Local Cache:</span>
+                  <span className="text-gray-200">IndexedDB local catalog query (70k+ UK items, &lt;10ms)</span>
                 </div>
-                <div className="pl-4 border-l border-gray-700 text-gray-400 text-xs">
-                  &darr; Deterministic ingredient &bull; allergen taxonomy matching
-                </div>
-                <div className="flex flex-wrap items-center gap-2">
+                <div className="flex items-center gap-2">
                   <span className="text-emerald-400 font-bold">03</span>
                   <span className="text-gray-400">Deterministic Verdict:</span>
                   <span className="text-gray-200">14 EU allergen cross-reference with instant binary safety display</span>
@@ -272,7 +296,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2 pt-1">
               {["Next.js", "TypeScript", "Offline-First", "Barcode API", "14 EU Allergens", "Tailwind CSS"].map((t) => (
                 <span key={t} className="text-xs font-mono bg-gray-800/90 border border-gray-700 text-gray-300 px-2.5 py-1 rounded">
                   {t}
@@ -314,12 +338,14 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Experiment 1: Molecular Toxicity */}
             <div className="bg-gray-900/90 border border-gray-800 rounded-xl p-6 flex flex-col justify-between space-y-4 hover:border-gray-700 transition-colors">
-              <div className="space-y-4">
+              <div className="space-y-3.5">
                 <div className="flex flex-wrap items-center justify-between gap-2 text-xs sm:text-sm font-mono">
                   <span className="text-gray-300 font-semibold whitespace-nowrap">
                     Applied Machine Learning &bull; Drug Discovery
                   </span>
-                  <span className="text-emerald-400 font-medium">R² 0.99 | RMSE 0.1577</span>
+                  <span className="text-emerald-400 font-medium px-2 py-0.5 rounded bg-emerald-950/60 border border-emerald-800/60">
+                    R² 0.99 | RMSE 0.1577
+                  </span>
                 </div>
                 <Link href="/projects/ai-drug-pipeline" className="group/title block">
                   <h3 className="text-xl font-bold text-white tracking-tight group-hover/title:text-blue-400 transition-colors">
@@ -327,39 +353,8 @@ export default function Home() {
                   </h3>
                 </Link>
                 <p className="text-sm sm:text-base text-gray-300 leading-relaxed">
-                  High-throughput machine learning pipeline predicting molecular properties and compound toxicity with TreeSHAP explainability and partitioned Parquet data streaming for memory efficiency.
+                  High-throughput machine learning pipeline predicting molecular properties and compound toxicity with TreeSHAP explainability and partitioned Parquet data streaming via PyArrow for memory efficiency.
                 </p>
-
-                {/* Architecture Pipeline Strip */}
-                <div className="bg-gray-950/80 border border-gray-800 rounded-lg p-3.5 sm:p-4 font-mono text-xs space-y-2.5">
-                  <div className="text-xs uppercase tracking-wider text-gray-300 font-semibold flex items-center justify-between">
-                    <span>Pipeline &bull; Parquet to Explainable ML</span>
-                    <span className="text-blue-400 font-semibold">TreeSHAP</span>
-                  </div>
-                  <div className="space-y-1.5 text-xs text-gray-300">
-                    <div className="flex items-center gap-2">
-                      <span className="text-blue-400 font-bold">01</span>
-                      <span className="text-gray-400">Data Stream:</span>
-                      <span className="text-gray-200">PyArrow partitioned Parquet chunking</span>
-                    </div>
-                    <div className="pl-4 border-l border-gray-700 text-gray-400 text-xs">
-                      &darr; Molecular descriptor normalisation &bull; chemical property tensors
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <span className="text-blue-400 font-bold">02</span>
-                      <span className="text-gray-400">Inference:</span>
-                      <span className="text-gray-200">XGBoost regression with hyperparameter tuning</span>
-                    </div>
-                    <div className="pl-4 border-l border-gray-700 text-gray-400 text-xs">
-                      &darr; Feature attribution &bull; toxic substructure mapping
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <span className="text-emerald-400 font-bold">03</span>
-                      <span className="text-gray-400">Attribution:</span>
-                      <span className="text-gray-200">Granular TreeSHAP explainability plots</span>
-                    </div>
-                  </div>
-                </div>
 
                 <div className="flex flex-wrap gap-1.5 pt-1">
                   {["Python", "XGBoost", "TreeSHAP", "PyArrow", "Parquet", "Scikit-Learn"].map((t) => (
@@ -382,12 +377,14 @@ export default function Home() {
 
             {/* Experiment 2: WebGL GPU Optimizer */}
             <div className="bg-gray-900/90 border border-gray-800 rounded-xl p-6 flex flex-col justify-between space-y-4 hover:border-gray-700 transition-colors">
-              <div className="space-y-4">
+              <div className="space-y-3.5">
                 <div className="flex flex-wrap items-center justify-between gap-2 text-xs sm:text-sm font-mono">
                   <span className="text-gray-300 font-semibold whitespace-nowrap">
                     Graphics Systems &bull; WebGL 2.0
                   </span>
-                  <span className="text-emerald-400 font-medium">-75% VRAM Reduction</span>
+                  <span className="text-emerald-400 font-medium px-2 py-0.5 rounded bg-emerald-950/60 border border-emerald-800/60">
+                    -75% VRAM Reduction
+                  </span>
                 </div>
                 <Link href="/projects/gpu-optimizer" className="group/title block">
                   <h3 className="text-xl font-bold text-white tracking-tight group-hover/title:text-blue-400 transition-colors">
@@ -397,37 +394,6 @@ export default function Home() {
                 <p className="text-sm sm:text-base text-gray-300 leading-relaxed">
                   Client-side utility that packs discrete PBR material channels (Roughness, Metallic, AO, Height) into single 32-bit RGBA textures, cutting browser VRAM footprint by up to 75% while locking rendering at 60 FPS.
                 </p>
-
-                {/* Architecture Pipeline Strip */}
-                <div className="bg-gray-950/80 border border-gray-800 rounded-lg p-3.5 sm:p-4 font-mono text-xs space-y-2.5">
-                  <div className="text-xs uppercase tracking-wider text-gray-300 font-semibold flex items-center justify-between">
-                    <span>Pipeline &bull; PBR Channel Packing to Canvas</span>
-                    <span className="text-blue-400 font-semibold">60 FPS Locked</span>
-                  </div>
-                  <div className="space-y-1.5 text-xs text-gray-300">
-                    <div className="flex items-center gap-2">
-                      <span className="text-blue-400 font-bold">01</span>
-                      <span className="text-gray-400">Texture Input:</span>
-                      <span className="text-gray-200">Discrete R, G, B, A channel source streams</span>
-                    </div>
-                    <div className="pl-4 border-l border-gray-700 text-gray-400 text-xs">
-                      &darr; Fragment shader multi-pass coalescing &bull; memory alignment
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <span className="text-blue-400 font-bold">02</span>
-                      <span className="text-gray-400">GPU Packing:</span>
-                      <span className="text-gray-200">Custom GLSL fragment shader packing pass</span>
-                    </div>
-                    <div className="pl-4 border-l border-gray-700 text-gray-400 text-xs">
-                      &darr; 4 texture samplers reduced to 1 unified 32-bit texture
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <span className="text-emerald-400 font-bold">03</span>
-                      <span className="text-gray-400">Output:</span>
-                      <span className="text-gray-200">Three.js / WebGL viewport with 75% VRAM savings</span>
-                    </div>
-                  </div>
-                </div>
 
                 <div className="flex flex-wrap gap-1.5 pt-1">
                   {["WebGL 2.0", "GLSL Shaders", "TypeScript", "Three.js", "PBR Texture Packing", "HTML5 Canvas"].map((t) => (
