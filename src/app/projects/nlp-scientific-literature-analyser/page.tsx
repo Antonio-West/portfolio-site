@@ -28,7 +28,7 @@ export default function NLPScientificLiteratureAnalyser() {
 
         {/* Hero Section */}
         <section className="border-b border-gray-800 pb-10 mb-10 text-center sm:text-left">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-400 text-xs font-mono mb-4">
+          <div className="text-xs font-mono text-gray-400 font-medium mb-4">
             NLP &bull; Biomedical Knowledge Graphs &bull; Information Retrieval
           </div>
           <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight mb-4">

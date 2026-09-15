@@ -1,7 +1,8 @@
-﻿import React from "react";
+import React from "react";
 import Link from "next/link";
 import type { Metadata } from "next";
 import AnimatedBackground from "@/components/AnimatedBackground";
+import GitHubIcon from "@/components/GitHubIcon";
 
 export const generateMetadata = (): Metadata => {
   return {
@@ -36,7 +37,7 @@ export default function GPUOptimizerPage() {
 
         {/* Hero Section */}
         <section className="border-b border-gray-800 pb-10 mb-10">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-400 text-xs font-mono mb-4">
+          <div className="text-xs font-mono text-gray-400 font-medium mb-4">
             GPU Optimization &bull; WebGL 2.0 &bull; Real-Time Systems
           </div>
           <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight mb-4 text-white">
@@ -167,6 +168,28 @@ void main() {
             </a>
           </div>
         </section>
+
+        {/* Footer */}
+        <div className="border-t border-gray-800 pt-6 mt-12 flex flex-wrap items-center justify-between gap-4 text-xs font-mono text-gray-400">
+          <div className="flex items-center gap-4">
+            <Link href="/projects" className="text-blue-400 hover:text-blue-300 transition-colors">
+              &larr; Back to all projects
+            </Link>
+            <span className="text-gray-700">&bull;</span>
+            <a
+              href="https://github.com/antonio-west"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-300 hover:text-white transition-colors inline-flex items-center gap-1.5 whitespace-nowrap"
+            >
+              <GitHubIcon className="w-3.5 h-3.5" />
+              <span>github.com/antonio-west</span>
+            </a>
+          </div>
+          <a href="mailto:antonio@antoniowest.dev" className="hover:text-white transition-colors whitespace-nowrap">
+            antonio@antoniowest.dev
+          </a>
+        </div>
       </div>
     </div>
   );

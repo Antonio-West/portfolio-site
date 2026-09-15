@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import AnimatedBackground from "@/components/AnimatedBackground";
+import GitHubIcon from "@/components/GitHubIcon";
 import type { Metadata } from "next";
 
 export const generateMetadata = (): Metadata => {
@@ -28,7 +29,7 @@ export default function AIDrugPipeline() {
 
         {/* Hero Section */}
         <section className="border-b border-gray-800 pb-10 mb-10 text-center sm:text-left">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/30 text-blue-400 text-xs font-mono mb-4">
+          <div className="text-xs font-mono text-gray-400 font-medium mb-4">
             Applied AI &bull; Molecular Discovery &bull; Model Interpretability
           </div>
           <h1 className="text-3xl sm:text-5xl font-extrabold tracking-tight mb-4">
@@ -100,14 +101,37 @@ export default function AIDrugPipeline() {
         {/* Call to Action */}
         <section className="text-center py-6">
           <a
-            href="https://gitlab.com/Sheldon01/AI_Powered_Drug_Analysis_Pipeline#"
+            href="https://github.com/antonio-west"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-blue-600 hover:bg-blue-500 text-white font-medium py-3 px-6 rounded-lg transition-all"
+            className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-medium py-3 px-6 rounded-lg transition-all"
           >
-            View Repository on GitLab &rarr;
+            <GitHubIcon className="w-4 h-4" />
+            <span>View Profile &amp; Repositories on GitHub &rarr;</span>
           </a>
         </section>
+
+        {/* Footer */}
+        <div className="border-t border-gray-800 pt-6 mt-12 flex flex-wrap items-center justify-between gap-4 text-xs font-mono text-gray-400">
+          <div className="flex items-center gap-4">
+            <Link href="/projects" className="text-blue-400 hover:text-blue-300 transition-colors">
+              &larr; Back to all projects
+            </Link>
+            <span className="text-gray-700">&bull;</span>
+            <a
+              href="https://github.com/antonio-west"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-300 hover:text-white transition-colors inline-flex items-center gap-1.5 whitespace-nowrap"
+            >
+              <GitHubIcon className="w-3.5 h-3.5" />
+              <span>github.com/antonio-west</span>
+            </a>
+          </div>
+          <a href="mailto:antonio@antoniowest.dev" className="hover:text-white transition-colors whitespace-nowrap">
+            antonio@antoniowest.dev
+          </a>
+        </div>
       </div>
     </div>
   );

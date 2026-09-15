@@ -3,6 +3,8 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import ProjectCard from "@/components/ProjectCard";
 import AnimatedBackground from "@/components/AnimatedBackground";
+import GitHubIcon from "@/components/GitHubIcon";
+import EmailLink from "@/components/EmailLink";
 
 export const generateMetadata = (): Metadata => {
   return {
@@ -13,6 +15,16 @@ export const generateMetadata = (): Metadata => {
 };
 
 const productionProjects = [
+  {
+    title: "Veribite — Offline-First Allergen & Ingredient Scanner",
+    slug: "veribite",
+    category: "Founder & Lead Engineer • Veribite",
+    description:
+      "Consumer food safety mobile app scanning 70k+ UK grocery products for instant allergen verdicts. Engineered for supermarket aisles with offline-first indexed datasets, sub-second barcode resolution, and 14 EU allergen profile matching. Pitch finalist / interviewed at Bethnal Green Ventures.",
+    metrics: "70k+ Products • <1s Verdict",
+    tags: ["Next.js", "TypeScript", "Offline-First", "Barcode Engine", "Tailwind CSS", "14 EU Allergens"],
+    liveDemoUrl: "https://veribite.com",
+  },
   {
     title: "Document Parsing & AI Personalisation Pipeline",
     slug: "ai-document-pipeline",
@@ -31,18 +43,18 @@ const productionProjects = [
     metrics: "ChatSDK Infrastructure",
     tags: ["TypeScript", "Next.js", "PostgreSQL", "Drizzle ORM", "Whereby API", "shadcn/ui"],
   },
+];
+
+const sideProjects = [
   {
     title: "Molecular Toxicity & Property ML Pipeline",
     slug: "ai-drug-pipeline",
-    category: "Applied Machine Learning",
+    category: "Applied Machine Learning (Side Project)",
     description:
       "High-throughput machine learning pipeline predicting molecular properties and compound toxicity with TreeSHAP explainability and partitioned Parquet data streaming.",
     metrics: "R² 0.99 | RMSE 0.1577",
     tags: ["Python", "XGBoost", "TreeSHAP", "PyArrow", "Parquet", "Scikit-Learn"],
   },
-];
-
-const sideProjects = [
   {
     title: "Zero-Dependency WebGL Shader & Texture Memory Optimizer",
     slug: "gpu-optimizer",
@@ -66,32 +78,43 @@ export default function ProjectsPage() {
             <div className="text-xs font-mono text-blue-400 uppercase tracking-wider mb-1">
               Antonio West &bull; Engineering Portfolio
             </div>
-            <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight">
+            <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white">
               Production AI &amp; Software Systems
             </h1>
           </div>
-          <div className="flex items-center gap-4">
+          <div className="flex flex-wrap items-center gap-3">
             <Link
               href="/"
-              className="text-sm font-mono text-gray-400 hover:text-white transition-colors inline-flex items-center gap-1.5"
+              className="text-xs font-mono text-gray-400 hover:text-white transition-colors inline-flex items-center gap-1.5 mr-1"
             >
-              &larr; Back to Overview
+              &larr; Overview
             </Link>
             <a
-              href="mailto:antonio@antoniowest.dev"
-              className="text-xs font-mono text-gray-300 hover:text-white bg-gray-900 hover:bg-gray-800 px-3.5 py-1.5 rounded-md border border-gray-800 transition-colors"
+              href="https://github.com/antonio-west"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs font-mono text-gray-300 hover:text-white bg-gray-900 hover:bg-gray-800 px-3 py-1.5 rounded-md border border-gray-800 hover:border-gray-700 transition-colors inline-flex items-center gap-1.5"
             >
-              Contact &bull; antonio@antoniowest.dev
+              <GitHubIcon className="w-3.5 h-3.5 text-gray-400" />
+              <span>GitHub</span>
             </a>
+            <EmailLink
+              className="text-xs font-mono text-gray-300 hover:text-white bg-gray-900 hover:bg-gray-800 px-3 py-1.5 rounded-md border border-gray-800 transition-colors whitespace-nowrap cursor-pointer inline-block"
+            />
           </div>
         </div>
 
         {/* Primary Production Systems */}
-        <div>
-          <div className="text-xs font-mono text-gray-400 uppercase tracking-wider mb-4">
-            Commercial Contracts &amp; ML Pipelines
+        <div className="space-y-6">
+          <div className="border-b border-gray-800 pb-3 flex flex-wrap items-center justify-between gap-2">
+            <h2 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
+              Commercial Contracts &amp; Founder Projects
+            </h2>
+            <span className="text-xs sm:text-sm font-mono text-gray-300 font-medium">
+              Shipped Systems &bull; Active Users
+            </span>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {productionProjects.map((project) => (
               <div key={project.slug} className="block h-full">
                 <ProjectCard
@@ -101,6 +124,7 @@ export default function ProjectsPage() {
                   description={project.description}
                   metrics={project.metrics}
                   tags={project.tags}
+                  liveDemoUrl={project.liveDemoUrl}
                 />
               </div>
             ))}
@@ -108,11 +132,16 @@ export default function ProjectsPage() {
         </div>
 
         {/* Side Projects & Experiments */}
-        <div className="border-t border-gray-800/80 pt-8">
-          <div className="text-xs font-mono text-gray-400 uppercase tracking-wider mb-4">
-            Technical Experiments &amp; Side Projects
+        <div className="space-y-6 pt-4">
+          <div className="border-b border-gray-800 pb-3 flex flex-wrap items-center justify-between gap-2">
+            <h2 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
+              Technical Experiments &amp; Side Projects
+            </h2>
+            <span className="text-xs sm:text-sm font-mono text-gray-300 font-medium">
+              Applied ML &bull; WebGL Graphics
+            </span>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {sideProjects.map((project) => (
               <div key={project.slug} className="block h-full">
                 <ProjectCard
@@ -127,6 +156,26 @@ export default function ProjectsPage() {
               </div>
             ))}
           </div>
+        </div>
+
+        {/* Footer */}
+        <div className="border-t border-gray-800 pt-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4 text-xs font-mono text-gray-400">
+          <div className="flex items-center gap-4">
+            <a
+              href="https://github.com/antonio-west"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-300 hover:text-white transition-colors inline-flex items-center gap-1.5 whitespace-nowrap"
+            >
+              <GitHubIcon className="w-3.5 h-3.5" />
+              <span>github.com/antonio-west</span>
+            </a>
+            <span className="text-gray-700">&bull;</span>
+            <EmailLink className="hover:text-blue-400 transition-colors whitespace-nowrap cursor-pointer" />
+          </div>
+          <Link href="/" className="hover:text-white transition-colors">
+            &larr; Back to Overview
+          </Link>
         </div>
       </div>
     </div>
